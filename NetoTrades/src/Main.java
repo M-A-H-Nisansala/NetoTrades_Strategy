@@ -67,6 +67,7 @@ public class Main {
 			regressionAnalyser.Analyse(detReg, numberOfRows, numberOfColumns, offerHistory, numberOfRounds, newOffer);
 			bayesianLearner.Learn(numberOfRows, numberOfColumns, detReg);
 			ConcessionStrategy.FindConcessionPoint(numberOfRows, numberOfColumns, detReg, newOffer, agent1, stepSize, numberOfRounds, offerHistory);
+			ConcessionStrategy.GenerateNextOffer(detReg, agent1, numberOfRows, numberOfColumns, newOffer, stepSize);
 			
 			round++;
 		}
